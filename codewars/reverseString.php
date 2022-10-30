@@ -5,21 +5,26 @@
 // 'world'  =>  'dlrow'
 // 'word'   =>  'drow'
 
-// function solution($str){
-//     $reverseString = "";
-//     $count = strlen($str)-1;
-//     for($i = $count; $i >= 0; $i--){
-//         $reverseString.=$str[$i];
-//     }
-//     return $reverseString;
-// }
-
-$palavra = readline("input: ");
-
-function reverte ($palavra)
+function solution ($str)
 {
-    $array_palavra = str_split($palavra); // transforma a string em array
-    $palavraReversa = array_reverse($array_palavra); // reverte a ordem do array 
-    echo implode(", ", $palavraReversa); // transforma a string em array
+    $reverseString = "";
+    $count = strlen($str)-1;
+
+    for($i = $count; $i >= 0; $i--){
+        $reverseString.=$str[$i];
+    }
+    return $reverseString;
 }
-reverte($palavra);
+
+echo solution("palavra");
+
+
+// $palavra = readline("input: ");
+
+// function reverte ($palavra)
+// {
+//     $array_palavra = str_split($palavra); // transforma a string em array
+//     $palavraReversa = array_reverse($array_palavra); // reverte a ordem do array 
+//     echo implode(", ", $palavraReversa); // transforma a string em array
+// }
+// reverte($palavra);
